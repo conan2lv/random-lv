@@ -2,11 +2,16 @@
   "name": "random-lv",
   "version": "0.1.0",
   "description": "a javascript library for generate various random values",
-  "keywords": ["javascript", "random"],
-  "maintainers": [{
-    "name": "conan_lv",
-    "email": "conan_lv@126.com"
-  }],
+  "keywords": [
+    "javascript",
+    "random"
+  ],
+  "maintainers": [
+    {
+      "name": "conan_lv",
+      "email": "conan_lv@126.com"
+    }
+  ],
   "main": "src/index.js",
   "scripts": {
     "test": "mocha"
@@ -20,6 +25,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^7.22.0",
     "mocha": "^8.3.2"
   }
 }
