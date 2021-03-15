@@ -14,7 +14,7 @@ const randomArray = require('./randomArray');
  * randomString('')
  * // => ''
  * 
- * randomString(['sxd', 1)
+ * randomString('sxd', 1)
  * // => x
  * 
  * randomString('node', 0, 1)
