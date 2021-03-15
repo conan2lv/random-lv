@@ -57,4 +57,4 @@ function type(arg) {
     return 'Unknown'
 }
 
- export default type
+ module.exports =  type

@@ -26,4 +26,4 @@ function round(num) {
     return num >= 0 ? Math.floor(num) : Math.ceil(num);
 }
 
- export default round
+module.exports  = round

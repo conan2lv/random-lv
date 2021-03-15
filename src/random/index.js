@@ -1,7 +1,7 @@
-import type from '../util/type'
-import randomBoolean from './randomBoolean'
-import randomNumber from './randomNumber'
-import randomNumber2 from './randomNumber2'
+const type = require('../util/type');
+const randomBoolean = require('./randomBoolean');
+const randomNumber = require('./randomNumber');
+const randomNumber2 = require('./randomNumber2')
 /**
  *
  * @description 从给定的范围内取1个随机值
@@ -23,8 +23,15 @@ function random() {
         switch(t) {
             case 'Undefined': 
             case 'Null': 
+            case 'NaN':
             case 'Boolean': 
                 return randomBoolean();
+            case 'Infinity':
+                return randomNumber(Number.MAX_VALUE);
+            case '-Infinity':
+                return randomNumber(Number.MIN_VALUE);
+            case 'Number':
+                return randomNumber();
             case 'Unknown': 
                 throw Error('error: the argument1 is unknown');
             default: 
@@ -32,5 +39,4 @@ function random() {
         }
     }
 }
-
-export default random;
+module.exports = random;

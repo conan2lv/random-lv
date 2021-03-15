@@ -1,4 +1,4 @@
-import round from '../util/round';
+const round = require('../util/round');
 /**
  * @description 取两数之间的一个随机整数
  * @since 0.1.0
@@ -25,4 +25,4 @@ function randomNumber2(start, end) {
     return Math.floor(r * (e - s + 1)) + s
 }
 
- export default randomNumber2
+ module.exports = randomNumber2

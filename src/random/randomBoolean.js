@@ -14,4 +14,4 @@
     return r >= 0.5 ? true : false
 }
 
- export default randomBoolean
+ module.exports = randomBoolean
