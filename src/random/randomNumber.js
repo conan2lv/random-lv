@@ -1,4 +1,5 @@
 const round = require('../util/round');
+const randomNumber2 = require('./randomNumber2')
 /**
  * @description 取给定范围的一个随机整数
  * @since 0.1.0
@@ -15,6 +16,9 @@ const round = require('../util/round');
  */
 
 function randomNumber(num) {
+    if (arguments[1]) {
+        return randomNumber2(...arguments);
+    }
     const n = round(num);
     const r = Math.random();
     return n >=0 ? Math.floor(r * (n + 1)) : Math.ceil(r * (n - 1));
