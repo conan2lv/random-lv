@@ -6,9 +6,3 @@
 //         })
 //     })
 // })
-const test = require('../src/random/randomArray')
-const num = 10
-for(let i = 0; i < num; i++) {
-    const res = test([1, 2, 7], 5,  -2)
-    console.log(res)
-}

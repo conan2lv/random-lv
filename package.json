@@ -14,7 +14,9 @@
   ],
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "webpack --mode=development --progress ",
+    "build": "webpack --mode=production --progress "
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^7.22.0",
-    "mocha": "^8.3.2"
+    "mocha": "^8.3.2",
+    "webpack": "^5.26.3",
+    "webpack-cli": "^4.5.0"
   }
 }
