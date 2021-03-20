@@ -1,5 +1,6 @@
 const round = require('../util/round');
-const randomNumber2 = require('./randomNumber2')
+const type = require('../util/type');
+const randomNumber2 = require('./randomNumber2');
 /**
  * @description 取给定范围的一个随机整数
  * @since 0.1.0
@@ -16,7 +17,7 @@ const randomNumber2 = require('./randomNumber2')
  */
 
 function randomNumber(num) {
-    if (arguments[1]) {
+    if (arguments[1] && type(arguments[1] === 'Number')) {
         return randomNumber2(...arguments);
     }
     const n = round(num);
