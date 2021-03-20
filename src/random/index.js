@@ -3,8 +3,10 @@ const randomBoolean = require('./randomBoolean');
 const randomNumber = require('./randomNumber');
 const randomString = require('./randomString');
 const randomObject = require('./randomObject');
+const randomDate = require('./randomDate')
 const randomMap = require('./randomMap');
 const randomSet = require('./randomSet');
+const randomTypedArray = require('./randomTypedArray');
 /**
  *
  * @description 从给定的范围内取1个随机值
@@ -41,12 +43,23 @@ function random() {
             return randomObject(...arguments);
         case 'Function':
             return random(arguments[0]());
+        case 'Date':
+            return randomDate(...arguments);
         case 'Map':
         case 'WeakMap':
             return randomMap(...arguments);
         case 'Set':
         case 'WeakSet':
             return randomSet(...arguments);
+        case 'Int8Array':
+        case 'Uint8Array':
+        case 'Int16Array':
+        case 'Uint16Array':
+        case 'Int32Array':
+        case 'Uint32Array':
+        case 'Float32Array':
+        case 'Float64Array':
+            return randomTypedArray(...arguments)
         case 'Unknown': 
             throw Error('error: the argument1 is unknown');
         default: 
